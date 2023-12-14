@@ -1,8 +1,6 @@
 import React from "react";
 import s from "./Calc.module.scss";
-import CalcScreen from "./screen/screen";
 import ButtonNumber from "./button/NumberButtom";
-import ExpressionScreen from "./ExpressionScreen";
 import c from "./screen/screen.module.scss";
 
 function CalcBody() {
@@ -14,6 +12,7 @@ function CalcBody() {
         <div id="rezult" className={s.rezult}></div>
       </div>
       <div className={s.white__container}></div>
+
       <ButtonNumber onClick={heandler} />
     </main>
   );
