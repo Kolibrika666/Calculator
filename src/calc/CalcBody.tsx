@@ -1,20 +1,22 @@
-import React from "react";
+import { useState } from "react";
 import s from "./Calc.module.scss";
+import ButtonField from "./button/buttonField";
 import CalcScreen from "./screen/screen";
-import ButtonNumber from "./button/NumberButtom";
-import ExpressionScreen from "./ExpressionScreen";
-import c from "./screen/screen.module.scss";
 
 function CalcBody() {
-  const heandler = () => {};
+  const [number, setNumber] = useState("");
+
+  const numberClick = () => {
+    setNumber + number;
+  };
+
+  const operationClick = () => {};
+
   return (
     <main>
-      <div className={c.screen__container}>
-        <div className={s.expression}>1234 - 24</div>;
-        <div id="rezult" className={s.rezult}></div>
-      </div>
+      <CalcScreen textRezult={setNumber} />
       <div className={s.white__container}></div>
-      <ButtonNumber onClick={heandler} />
+      <ButtonField numberClick={numberClick} operationClick={operationClick} />
     </main>
   );
 }
